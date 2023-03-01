@@ -1,6 +1,9 @@
 .infos {
   //padding: 182px 0;
   padding: 44px 0 230px;
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
   //background: red;
 
   @media screen and (max-width: 767px) {
@@ -37,51 +40,71 @@
 
       &-small {
         position: absolute;
-        bottom: -34px;
-        @media screen and (max-width: 767px) {
-          min-width: 160px;
+        bottom: -34px !important;
+        top: auto !important;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        height: 170px;
+        width: 100%;
+        img{
+          max-width: 358px;
           width: 100%;
-          max-width: 42vw;
+          height: 100%;
+        }
+        @media screen and (max-width: 767px) {
           bottom: -13px;
+          height: 110px;
+          img{
+            min-width: 160px;
+            max-width: 42vw;
+          }
         }
       }
     }
   }
 
   &-effects {
-    width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 0;
-
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
     &__left {
-      .effect-1 {
+      height: 100%;
+      &.effect-1 {
         position: absolute;
         top: 45px;
         left: 0;
+        width: 98px;
+        height: 196px;
       }
 
-      .effect-2 {
+      &.effect-2 {
         position: absolute;
         bottom: 195px;
-        left: 185px;
+        left: 185px !important;
+        top: auto !important;
+        width: 98px;
+        height: 196px;
       }
 
       @media screen and (max-width: 1600px) {
-        .effect-2 {
-          left: 95px;
+        &.effect-2 {
+          left: 95px !important;
         }
       }
       @media screen and (max-width: 1420px) {
-        .effect-2 {
-          display: none;
+        &.effect-2 {
+          display: none !important
         }
       }
       @media screen and (max-width: 767px) {
-        .effect-1 {
-          transform: rotate(-90deg);
+        &.effect-1 {
+          transform: rotate(-90deg) !important;
           height: 67px;
           width: 34px;
           top: -17px;
@@ -96,31 +119,39 @@
     }
 
     &__right {
-      .effect-1 {
+      height: 100%;
+      &.effect-1 {
         position: absolute;
-        top: 45px;
+        top: 45px !important;
         right: 182px;
+        left: auto !important;
+        width: 98px;
+        height: 196px;
       }
 
-      .effect-2 {
+      &.effect-2 {
         position: absolute;
         bottom: 195px;
         right: 0;
+        left: auto !important;
+        top: auto !important;
+        width: 98px;
+        height: 196px;
       }
 
       @media screen and (max-width: 1600px) {
-        .effect-1 {
+        &.effect-1 {
           right: 85px;
         }
       }
       @media screen and (max-width: 1430px) {
-        .effect-1 {
-          display: none;
+        &.effect-1 {
+          display: none !important
         }
       }
       @media screen and (max-width: 767px) {
-        .effect-2 {
-          transform: rotate(-90deg);
+        &.effect-2 {
+          transform: rotate(-90deg) !important;
           height: 67px;
           width: 34px;
           bottom: 43px;

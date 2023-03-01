@@ -70,6 +70,33 @@ h6 {
   font-family: $fontMainTh;
 }
 
+@keyframes loadingHighlight {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes loadingOpacity {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+
+  }
+}
+
+.aos-animate .h1 b::before,
+.home .h1 b::before {
+  animation: 2s ease-in loadingHighlight;
+}
 
 h1, .h1 {
   font-weight: 250;
@@ -88,10 +115,15 @@ h1, .h1 {
       height: 17px;
       background: $yellow;
       bottom: 12px;
-      left: 50%;
-      transform: translateX(-50%);
+      left: 0;
+      //transform: translateX(-50%);
+      transition: width .3s ease;
     }
   }
+
+  //&.animated b::before  {
+  //  animation: 2s ease-in  loadingHighlight;
+  //}
 
   @media screen and (max-width: 1480px) {
     font-size: 72px;
@@ -116,12 +148,12 @@ h1, .h1 {
 }
 
 
-
 %h2 {
   font-weight: 250;
   font-size: 48px;
   line-height: 1.5;
 }
+
 %h3 {
   font-weight: 250;
   font-size: 36px;
@@ -130,12 +162,14 @@ h1, .h1 {
     font-size: 32px;
   }
 }
+
 %h4 {
   font-weight: 250;
   font-size: 24px;
   line-height: 1.5;
 }
-%p{
+
+%p {
   font-weight: 400;
   font-size: 20px;
   line-height: 1.5;
@@ -146,21 +180,25 @@ h1, .h1 {
     font-size: 16px;
   }
 }
+
 %p1 {
   font-weight: 400;
   font-size: 18px;
   line-height: 1.5;
 }
+
 %p2 {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
 }
+
 %p3 {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.5;
 }
+
 %p4 {
   font-weight: 400;
   font-size: 12px;

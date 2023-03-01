@@ -137,14 +137,30 @@
       &-inner {
         height: 516px;
         cursor: pointer;
+        transition: all 0.3s;
 
         &:hover {
           .projects-swiper__content {
+            //opacity: 0;
+          }
+          .projects-swiper__content-inner{
             opacity: 0;
+            bottom: -100px;
           }
 
           .projects-swiper__more {
             opacity: 1;
+          }
+          .projects-swiper__more-body{
+            animation: 0.5s ease-in loadingOpacity;
+
+          }
+          .projects-swiper__more-footer{
+            animation: 0.5s ease-in loadingOpacity;
+
+          }
+          .projects-swiper__more-header{
+            animation: 0.5s ease-in loadingOpacity;
           }
         }
       }
@@ -152,7 +168,7 @@
 
     &__content {
       height: 100%;
-      transition: all 0.3s ease-in-out;
+      transition: all 0.3s ;
 
       &-inner {
         position: absolute;
@@ -161,6 +177,8 @@
         left: 0;
         padding: 20px 32px 33px;
         background: rgba($black1, 0.5);
+        transition: all 0.3s ;
+
         @media screen and (max-width: 560px) {
           padding: 20px 20px 15px;
         }
@@ -182,22 +200,26 @@
       opacity: 0;
       position: absolute;
       top: 0;
+      height: 100%;
       padding: 32px;
-      transition: all 0.3s ease-in-out;
-@media screen and (max-width: 767px){
-  padding: 36px 20px;
-}
+      transition: all 0.3s ;
+
+      @media screen and (max-width: 767px) {
+        padding: 36px 20px;
+      }
+
       &-header {
         margin-bottom: 32px;
-
       }
 
       &-body {
         margin-bottom: 32px;
+
         @media screen and (max-width: 560px) {
           max-height: 312px;
           overflow: hidden;
         }
+
       }
 
       &-footer {
@@ -241,7 +263,7 @@
       display: block;
       text-align: center;
       margin-top: 37px;
-      .btn-projects{
+      .btn-projects {
         height: 40px;
         padding: 8px 41px;
         //@extend %p2;
@@ -253,7 +275,7 @@
   }
 }
 
-.ßgallery-thumbs  .swiper-slide {
+.ßgallery-thumbs .swiper-slide {
   @media screen and (max-width: 767px) {
     max-width: 60px;
     width: 100%;
