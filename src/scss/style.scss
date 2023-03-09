@@ -1,24 +1,24 @@
 // Global SCSS-files imports
-@import './fonts';
-@import './vars';
-@import './reset';
-@import './global';
-@import './libs/aos';
+@import 'fonts';
+@import 'vars';
+@import 'reset';
+@import 'global';
+@import 'libs/aos';
 
 // Sections or Pages SCSS-files imports
 // @import './header';
-@import './footer';
-@import "./home";
-@import "./about";
-@import "./statistic";
-@import "./projects";
-@import "./clients";
-@import "./infos";
-@import "./modal";
+@import 'footer';
+@import "home";
+@import "about";
+@import "statistic";
+@import "projects";
+@import "clients";
+@import "infos";
+@import "modal";
 
 
 // Libs
- @import './libs/swiper';
+ @import 'libs/swiper';
 
 .social {
   margin-top: 12px;

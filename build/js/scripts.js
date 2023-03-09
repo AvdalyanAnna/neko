@@ -24,10 +24,9 @@
 
 
 AOS.init({
-    once: true,
-    duration: 800,
-    // disable: 'mobile'
+    duration: 800, // установить длительность анимации
 });
+
 let show = false
 $(window).scroll(function () {
     // выбираем нужный элемент
@@ -52,7 +51,7 @@ $(window).scroll(function () {
 });
 
 new Parallax(document.querySelector('.infos-effects'));
-new Parallax(document.querySelector('.infos-inner__images'));
+//new Parallax(document.querySelector('.infos-inner__images'));
 // new Parallax(document.querySelector('.infos-effects__right'));
 // new Parallax(document.querySelector('.infos-inner__images'));
 
@@ -136,17 +135,7 @@ function swiperCard() {
 }
 swiperCard();
 window.addEventListener("resize", swiperCard);
-const swiperClients = new Swiper(".clients-list", {
-    spaceBetween: 0,
-    slidesPerView: "auto",
-    speed: 400,
-    loop:true,
-    autoplay: {
-        delay: 1000,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true,
-    },
-});
+const clientsLoop = document.querySelector('[data-loop]')?.dataset?.loop;
 
 const galleryTop = new Swiper('.gallery-top', {
     spaceBetween: 10,
@@ -189,5 +178,24 @@ galleryTop.on('slideChange', function() {
     const currentSlideIndex = galleryTop.activeIndex
     document.querySelector('.modal-projects__big .swiper-numbers-start').innerHTML = (currentSlideIndex + 1).toString().padStart(2, "0")
 });
+
+
+
+setTimeout(() => {
+    let clientsItem = document.querySelectorAll('.clients-list__first .swiper-slide');
+    let clientsItemWidth = 0;
+    for(let i = 0; i < clientsItem.length; i++){
+        clientsItemWidth+=clientsItem[i].clientWidth
+        console.log(clientsItem[i].clientWidth)
+    }
+    console.log({clientsItemWidth})
+
+    const clientsList = document.querySelectorAll('.clients-list');
+    for(let i = 0; i < clientsList.length; i++){
+        clientsList[i].style.minWidth = clientsItemWidth + 'px';
+    }
+
+}, 10);
+
 
 

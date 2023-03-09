@@ -189,8 +189,9 @@
 
 
 }
-
-.gallery-thumbs .swiper-slide {
-  width: 100%;
-  max-width: 60px;
+@media screen and (max-width: 767px){
+    .gallery-thumbs .swiper-slide {
+        width: 100%;
+        max-width: 60px;
+    }
 }

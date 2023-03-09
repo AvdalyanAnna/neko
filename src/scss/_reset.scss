@@ -70,6 +70,7 @@ h6 {
   font-family: $fontMainTh;
 }
 
+
 @keyframes loadingHighlight {
   0% {
     width: 0;
@@ -92,10 +93,9 @@ h6 {
 
   }
 }
-
-.aos-animate .h1 b::before,
-.home .h1 b::before {
-  animation: 2s ease-in loadingHighlight;
+.swiper-slide-active .h1 b::before,
+.aos-animate .h1 b::before {
+  animation: 0.5s ease-in loadingHighlight;
 }
 
 h1, .h1 {

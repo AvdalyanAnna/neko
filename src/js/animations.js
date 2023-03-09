@@ -1,8 +1,7 @@
 AOS.init({
-    once: true,
-    duration: 800,
-    // disable: 'mobile'
+    duration: 800, // установить длительность анимации
 });
+
 let show = false
 $(window).scroll(function () {
     // выбираем нужный элемент
@@ -27,6 +26,6 @@ $(window).scroll(function () {
 });
 
 new Parallax(document.querySelector('.infos-effects'));
-new Parallax(document.querySelector('.infos-inner__images'));
+//new Parallax(document.querySelector('.infos-inner__images'));
 // new Parallax(document.querySelector('.infos-effects__right'));
 // new Parallax(document.querySelector('.infos-inner__images'));
