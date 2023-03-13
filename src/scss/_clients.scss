@@ -32,10 +32,19 @@
   }
 
   &-list {
+    max-height: 47.22px;
     display: flex;
-    align-items: center;
-    min-width: 100vw;
-    animation: marquee 15s linear infinite;
+      align-items: center;
+      @media screen and (max-width: 767px) {
+        max-height: 36px;
+      }
+    .str_move{
+display: flex;
+  align-items: center;
+    }
+    &,&:hover{
+    background: transparent;
+    }
   }
 
   &-item {
